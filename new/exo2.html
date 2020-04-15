@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chronometre</title>
+    <style>
+    .display{
+    height: 100px;
+    width: 650px;
+    margin: 0 auto;
+    background-color: rgb(34, 33, 33);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 4px;
+}
+.display .child{
+    height: 50px;
+    width: 50px;
+    margin: 2px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: Agency FB;
+    color: red;
+}
+.controls{
+    width: 350px;
+    margin: 0 auto;
+}
+.controls button{
+    margin: 5px;
+    padding: 5px;
+    width: 100px;
+}
+.hours::after, .minutes::after, .seconds::after{
+content:" : ";
+}
+</style>
+</head>
+<body>
+    <div class="display">
+      <div class="hours child">00</div>
+      <div class="minutes child">00</div>
+      <div class="seconds child">00</div>
+        <div class="mseconds child">00</div>
+    </div>
+    <div class="controls">
+        <button class="start">start</button>
+        <button class="stop">stop</button>
+        <button class="reset">reset</button>
+    </div>
+   <script src="exo2.js"></script>
+</body>
+</html>
