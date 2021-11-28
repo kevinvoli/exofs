@@ -3,7 +3,8 @@ let video= './video.mp4';
 let fichier= 'fichier.mp4';
 
 
-let coool= fs.stat(video,(err,stat)=>{
+let coool= fs.stat(fichier,(err,stat)=>{
+    console.log(stat)
     let tempsDjaz= stat.mtimeMs
     let tailDjaz = stat.size
     let tails =stat.ino
@@ -12,7 +13,7 @@ let coool= fs.stat(video,(err,stat)=>{
         start:0,
          end:2901153,	
 })
-let ecriture= fs.createWriteStream(fichier);
+let ecriture= fs.createWriteStream(video);
 
 lecture.pipe(ecriture);
   
